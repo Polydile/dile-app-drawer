@@ -24,6 +24,7 @@ export class DileAppDrawer extends LitElement {
       
       .menu {
         display: none;
+        box-sizing: border-box;
         position: fixed;
         top: -100vh;
         left: 0;
@@ -35,8 +36,8 @@ export class DileAppDrawer extends LitElement {
         padding-left: var(--dile-app-drawer-closed-left, 0); 
         overflow: hidden;
         transition-property: top, padding;
-        transition-duration: 0.3s, 0.3s;
-        transition-delay: 0s, 0.31s;
+        transition-duration: 2.3s, 0.3s;
+        transition-delay: 0s, 2.31s;
         transition-timing-function: ease, ease-in;
       }
 
