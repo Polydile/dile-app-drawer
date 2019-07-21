@@ -2,6 +2,8 @@
 
 Web component to create a simple animated menu, useful as app global menu. Based on LitElement
 
+Go to [DEMOS page](https://dile-app-drawer.polydile.com/).
+
 ## Installation
 ```bash
 npm i dile-app-drawer
