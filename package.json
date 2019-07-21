@@ -1,8 +1,8 @@
 {
   "name": "dile-app-drawer",
   "version": "1.0.0",
-  "description": "Webcomponent dile-app-drawer following open-wc recommendations",
-  "author": "dile-app-drawer",
+  "description": "Webcomponent to create a app drawer menu, based on LitElement.",
+  "author": "@midesweb",
   "homepage": "https://github.com/Polydile/dile-app-drawer",
   "license": "MIT",
   "repository": "https://github.com/Polydile/dile-app-drawer.git",
@@ -20,5 +20,13 @@
   "devDependencies": {
     "es-dev-server": "^1.5.0",
     "@open-wc/demoing-storybook": "^0.2.0"
-  }
+  },
+  "keywords": [
+    "menu",
+    "drawer",
+    "app drawer",
+    "web component",
+    "LitElement",
+    "app-drawer"
+  ]
 }
