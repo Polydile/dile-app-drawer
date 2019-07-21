@@ -37,6 +37,10 @@ The component also provides a set of useful methods to controls the component st
 - **close()**: Closes the menu.
 - **toggle()**: Changes the state, from open to close or close to open.
 
+## Events
+
+- **dile-app-drawer-click-outside**: This custom event is dispatched when the drawer panel is closed because a user click outside the menu layer.
+
 ## CSS customization
 
 There are some CSS custom properties to customize the style and the animation.

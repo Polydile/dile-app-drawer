@@ -63,7 +63,6 @@ export class DileAppDrawer extends LitElement {
   updated(changedProperties) {
     if(changedProperties.has('opened')) {
       if(this.opened) {
-        console.log('updated opened positivo');
         document.addEventListener('click', this.documentCloseHandler);
         this._currentClass = 'opening';
         setTimeout(() => this._currentClass = 'opened', 100);
@@ -79,6 +78,10 @@ export class DileAppDrawer extends LitElement {
     if(this._currentClass == 'opened') {
       this.close()
     }
+    this.dispatchEvent(new CustomEvent('dile-app-drawer-click-outside', {
+      bubbles: true,
+      composed: true
+    }));
   }
   toggle() {
     this.opened = !this.opened;
@@ -89,7 +92,6 @@ export class DileAppDrawer extends LitElement {
   }
 
   close() {
-    console.log('close');
     this.opened = false;
   }
 
