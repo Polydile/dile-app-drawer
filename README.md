@@ -44,4 +44,5 @@ Custom property | Description | Default
 --dile-app-drawer-content-height | Height of the menu | auto
 --dile-app-drawer-background-color | Background color menu layer | #ddd
 --dile-app-drawer-z-index | z-index menu layer | 10000
---dile-app-drawer-relocate-from | Recolocation of the second interval animation | 40vh 0 0 0 
+--dile-app-drawer-closed-top | Drawer content top position in closed state | 40vh 
+--dile-app-drawer-closed-left | Drawer content left position in closed state | 0 

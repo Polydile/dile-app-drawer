@@ -13,6 +13,7 @@ export class DileAppDrawer extends LitElement {
     super();
     this.opened = false;
     this._currentClass = '';
+    this.documentCloseHandler = this._documentClose.bind(this);
   }
 
   static get styles() { 
@@ -30,11 +31,12 @@ export class DileAppDrawer extends LitElement {
         height: var(--dile-app-drawer-content-height, auto);
         background-color: var(--dile-app-drawer-background-color, #ddd);
         z-index: var(--dile-app-drawer-z-index, 10000);
-        padding: var(--dile-app-drawer-relocate-from, 40vh 0 0 0);
+        padding-top: var(--dile-app-drawer-closed-top, 40vh); 
+        padding-left: var(--dile-app-drawer-closed-left, 0); 
         overflow: hidden;
         transition-property: top, padding;
         transition-duration: 0.3s, 0.3s;
-        transition-delay: 0s, 0.35s;
+        transition-delay: 0s, 0.31s;
         transition-timing-function: ease, ease-in;
       }
 
@@ -52,7 +54,7 @@ export class DileAppDrawer extends LitElement {
 
   render() {
     return html`
-      <div class="menu ${ this._currentClass }">
+      <div class="menu ${ this._currentClass }" @click="${this._contentClick}">
           <slot></slot>
       </div>
     `;
@@ -61,15 +63,23 @@ export class DileAppDrawer extends LitElement {
   updated(changedProperties) {
     if(changedProperties.has('opened')) {
       if(this.opened) {
+        console.log('updated opened positivo');
+        document.addEventListener('click', this.documentCloseHandler);
         this._currentClass = 'opening';
         setTimeout(() => this._currentClass = 'opened', 100);
       } else {
+        document.removeEventListener('click', this.documentCloseHandler);
         this._currentClass = 'opening';
         setTimeout(() => this._currentClass = '', 200);
       }  
     }
   }
 
+  _documentClose() {
+    if(this._currentClass == 'opened') {
+      this.close()
+    }
+  }
   toggle() {
     this.opened = !this.opened;
   }
@@ -79,7 +89,12 @@ export class DileAppDrawer extends LitElement {
   }
 
   close() {
+    console.log('close');
     this.opened = false;
+  }
+
+  _contentClick(e) {
+    e.stopPropagation();
   }
 }
 customElements.define('dile-app-drawer', DileAppDrawer);
