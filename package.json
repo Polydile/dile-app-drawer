@@ -1,6 +1,6 @@
 {
   "name": "dile-app-drawer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Webcomponent to create a app drawer menu, based on LitElement.",
   "author": "@midesweb",
   "homepage": "https://github.com/Polydile/dile-app-drawer",

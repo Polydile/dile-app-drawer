@@ -78,11 +78,11 @@ export class DileAppDrawer extends LitElement {
   _documentClose() {
     if(this._currentClass == 'opened') {
       this.close()
+      this.dispatchEvent(new CustomEvent('dile-app-drawer-click-outside', {
+        bubbles: true,
+        composed: true
+      }));
     }
-    this.dispatchEvent(new CustomEvent('dile-app-drawer-click-outside', {
-      bubbles: true,
-      composed: true
-    }));
   }
   toggle() {
     this.opened = !this.opened;
