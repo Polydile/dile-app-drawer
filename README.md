@@ -1,3 +1,8 @@
+# Moved
+
+**This package has moved** and is now available at [@dile/dile-app-drawer](https://github.com/Polydile/dile-components). Please update your dependencies. This repository is no longer maintained.
+
+
 # \<dile-app-drawer>
 
 Web component to create a simple animated menu, useful as app global menu. Based on LitElement
@@ -50,5 +55,5 @@ Custom property | Description | Default
 --dile-app-drawer-content-height | Height of the menu | auto
 --dile-app-drawer-background-color | Background color menu layer | #ddd
 --dile-app-drawer-z-index | z-index menu layer | 10000
---dile-app-drawer-closed-top | Drawer content top position in closed state | 40vh 
---dile-app-drawer-closed-left | Drawer content left position in closed state | 0 
+--dile-app-drawer-closed-top | Drawer content top position in closed state | 40vh
+--dile-app-drawer-closed-left | Drawer content left position in closed state | 0
